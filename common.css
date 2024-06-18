@@ -1,0 +1,201 @@
+@charset "UTF-8";
+:root {
+  /*
+      root    scss   1
+      reset   scss  1 (벤치마킹)
+      변수 계산 scss 1
+      ----------------------
+      header  scss 1
+      footer  scss 1
+  */
+  /* Safari 모웹 화면 높이 vh 설정 */
+  /* color */
+  --color-black-deep1: #757575;
+  --color-black-deep2: #616161;
+  --color-black-deep3: #333;
+  --color-black-deep4: #000;
+  --color-white-lighten1: #eee;
+  --color-white-lighten2: #f5f5f5;
+  --color-white-lighten3: #bdbdbd;
+  --color-white-lighten4: #fff;
+  --color-yellow-accent1: #ffff00;
+  --color-yellow-accent2: #ffea00;
+  --color-yellow-accent3: #ffd600;
+  --color-amber-accent1: #ffab00;
+  /* 시스템컬러: 위험, 주의, 성공, 정보 */
+  --color-red-danger: #d32f2f;
+  --color-orange-warn: #f9a825;
+  --color-green-success: #4caf50;
+  --color-blue-info: #0091ea;
+  /* btn-size */
+  --btn-h-sm: 4.4rem;
+  --btn-h-lg: 5.2rem;
+  --btn-h-xl: 5.6rem;
+  --btn-h-xxl: 6.0rem;
+  --btn-h-xxxl: 7.0rem;
+  /* space */
+  --space-unit-xs: .8rem;
+  --space-unit-sm: 1.2rem;
+  --space-unit-md: 1.4rem;
+  --space-unit-lg: 2.0rem;
+  --space-unit-xl: 2.4rem;
+  --space-unit-xxl: 3.6rem;
+  /* font-family */
+  /* @media 스크린 너비 */
+  /* font-size */
+  --fz-px-xs: 1.2rem;
+  --fz-px-sm: 1.4rem;
+  --fz-px-rg: 1.6rem;
+  --fz-px-lg: 1.8rem;
+  --fz-px-xl: 2.1rem;
+  --fz-px-2xl: 2.4rem;
+  --fz-px-3xl: 2.7rem;
+  --fz-px-4xl: 3.0rem;
+  --fz-px-5xl: 3.3rem;
+  /* 1rem = 10px 일때 */
+  --fz-rem-default: 1rem;
+  --fz-rem-sm: 1.2rem;
+  --fz-rem-md: 1.4rem;
+  --fz-rem-rg: 1.6rem;
+  --fz-rem-lg: 1.8rem;
+}
+
+/* 테스트 - 꼭 따로 분리 */
+.container {
+  color: var(--color-amber-accent1);
+}
+.container > section {
+  margin-top: calc(var(--space-unit-sm) * 2);
+}
+
+/* 루트 scss 파일 분할 -> 다른 scss 파일로 이전 */
+/* 믹스인 컴포넌트 - (SPA) 믹스인 페이지별 선언할 필요 X */
+body {
+  /* 구글 폰트 */
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+.wrap {
+  padding: 3.6rem 2rem;
+  height: calc(100% - 5.2rem);
+  overflow-y: scroll;
+}
+
+/* margin-top */
+.mgt0 {
+  margin-top: 0rem;
+}
+
+.mgt4 {
+  margin-top: 0.4rem;
+}
+
+.mgt8 {
+  margin-top: 0.8rem;
+}
+
+.mgt12 {
+  margin-top: 1.2rem;
+}
+
+.mgt16 {
+  margin-top: 1.6rem;
+}
+
+.mgt20 {
+  margin-top: 2rem;
+}
+
+.mgt24 {
+  margin-top: 2.4rem;
+}
+
+.mgt28 {
+  margin-top: 2.8rem;
+}
+
+.mgt32 {
+  margin-top: 3.2rem;
+}
+
+.mgt36 {
+  margin-top: 3.6rem;
+}
+
+.mgt40 {
+  margin-top: 4rem;
+}
+
+.mgt44 {
+  margin-top: 4.4rem;
+}
+
+.mgt48 {
+  margin-top: 4.8rem;
+}
+
+/* padding-top */
+.pdt0 {
+  padding-top: 0rem !important;
+}
+
+.pdt4 {
+  padding-top: 0.4rem;
+}
+
+.pdt8 {
+  padding-top: 0.8rem;
+}
+
+.pdt12 {
+  padding-top: 1.2rem;
+}
+
+.pdt16 {
+  padding-top: 1.6rem;
+}
+
+.pdt20 {
+  padding-top: 2rem;
+}
+
+.pdt24 {
+  padding-top: 2.4rem;
+}
+
+.pdt28 {
+  padding-top: 2.8rem;
+}
+
+.pdt32 {
+  padding-top: 3.2rem;
+}
+
+.pdt36 {
+  padding-top: 3.6rem;
+}
+
+.pdt40 {
+  padding-top: 4rem;
+}
+
+.pdt44 {
+  padding-top: 4.4rem;
+}
+
+.pdt48 {
+  padding-top: 4.8rem;
+}
+
+.pdl24 {
+  padding-left: 2.4rem;
+}
+
+.pdl28 {
+  padding-left: 2.8rem;
+}
+
+.pdl32 {
+  padding-left: 3.2rem;
+}/*# sourceMappingURL=common.css.map */

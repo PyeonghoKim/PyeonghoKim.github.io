@@ -1,0 +1,54 @@
+@import 'root';
+
+/* 믹스인 컴포넌트 - (SPA) 믹스인 페이지별 선언할 필요 X */
+// @mixin fixed_center {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+body {
+  /* 구글 폰트 */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+.wrap {
+  padding: 3.6rem 2rem;
+  height: calc(100% - 5.2rem);
+  overflow-y: scroll;
+}
+
+/* margin-top */
+.mgt0 {margin-top: 0rem;}
+.mgt4 {margin-top: 0.4rem;}
+.mgt8 {margin-top: 0.8rem;}
+.mgt12 {margin-top: 1.2rem;}
+.mgt16 {margin-top: 1.6rem;}
+.mgt20 {margin-top: 2rem;}
+.mgt24 {margin-top: 2.4rem;}
+.mgt28 {margin-top: 2.8rem;}
+.mgt32 {margin-top: 3.2rem;}
+.mgt36 {margin-top: 3.6rem;}
+.mgt40 {margin-top: 4rem;}
+.mgt44 {margin-top: 4.4rem;}
+.mgt48 {margin-top: 4.8rem;}
+
+/* padding-top */
+.pdt0 {padding-top: 0rem !important;}
+.pdt4 {padding-top: 0.4rem;}
+.pdt8 {padding-top: 0.8rem;}
+.pdt12 {padding-top: 1.2rem;}
+.pdt16 {padding-top: 1.6rem;}
+.pdt20 {padding-top: 2rem;}
+.pdt24 {padding-top: 2.4rem;}
+.pdt28 {padding-top: 2.8rem;}
+.pdt32 {padding-top: 3.2rem;}
+.pdt36 {padding-top: 3.6rem;}
+.pdt40 {padding-top: 4rem;}
+.pdt44 {padding-top: 4.4rem;}
+.pdt48 {padding-top: 4.8rem;}
+
+.pdl24 {padding-left: 2.4rem;}
+.pdl28 {padding-left: 2.8rem;}
+.pdl32 {padding-left: 3.2rem;}
