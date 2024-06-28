@@ -70,10 +70,13 @@
 
 /* 루트 scss 파일 분할 -> 다른 scss 파일로 이전 */
 /* 믹스인 컴포넌트 - (SPA) 믹스인 페이지별 선언할 필요 X */
-body {
-  /* 구글 폰트 */
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
-  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+/* 구글 폰트 */
+/*body {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}*/
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .wrap {

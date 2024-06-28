@@ -8,11 +8,12 @@
 //   transform: translate(-50%, -50%);
 // }
 
-body {
-  /* 구글 폰트 */
+/* 구글 폰트 */
+/*body {
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
   font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-}
+}*/
+* { -webkit-tap-highlight-color:transparent; }
 .wrap {
   padding: 3.6rem 2rem;
   height: calc(100% - 5.2rem);
