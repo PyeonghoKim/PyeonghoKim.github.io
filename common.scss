@@ -1,3 +1,7 @@
+/* 구글 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* _root.scss */ 
 @import 'root';
 
 /* 믹스인 컴포넌트 - (SPA) 믹스인 페이지별 선언할 필요 X */
@@ -8,11 +12,7 @@
 //   transform: translate(-50%, -50%);
 // }
 
-/* 구글 폰트 */
-body {
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
-  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-}
+body {font-family: 'Montserrat', 'Noto Sans KR', sans-serif;}
 * { -webkit-tap-highlight-color:transparent; }
 .wrap {
   padding: 3.6rem 2rem;
@@ -28,7 +28,6 @@ a {
   // &:active,
   // &:visited {color: var(--color-amber-accent1)};
 }
-
 
 /* margin-top */
 .mgt0 {margin-top: 0rem;}
@@ -65,3 +64,16 @@ a {
 .pdl32 {padding-left: 3.2rem;}
 
 .pdr32 {padding-right: 3.2rem;}
+
+/* 표시 X, 의미만 있는 태그에 */
+.just_mean {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+  border: 0;
+  width: 0.1rem;
+  height: 0.1rem;
+  clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+  clip-path: inset(50%);
+}
