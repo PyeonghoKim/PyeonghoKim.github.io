@@ -19,6 +19,16 @@ body {
   height: calc(100% - 5.2rem);
   overflow-y: scroll;
 }
+a {
+  text-decoration: none;
+  color: var(--color-black-deep3);
+  
+  &:focus {color: var(--color-black-deep3)};
+  
+  // &:active,
+  // &:visited {color: var(--color-amber-accent1)};
+}
+
 
 /* margin-top */
 .mgt0 {margin-top: 0rem;}

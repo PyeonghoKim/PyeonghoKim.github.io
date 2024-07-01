@@ -43,11 +43,19 @@ li, ol {
 #app {
   height: 100vh;
 }
-input {
-  border-style: groove;
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
+input:checked + label {background-color: transparent;}
+input:disabled + label {background-color: transparent;}
 button {
-  border-style: groove;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: transparent;
   background-color: transparent;
 }
 
