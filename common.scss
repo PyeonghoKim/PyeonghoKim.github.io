@@ -28,6 +28,7 @@ a {
   // &:active,
   // &:visited {color: var(--color-amber-accent1)};
 }
+span.isActive::before, p.isActive {color: var(--color-amber-accent1) !important;}
 
 /* margin-top */
 .mgt0 {margin-top: 0rem;}
