@@ -14,9 +14,14 @@
 
 body {font-family: 'Montserrat', 'Noto Sans KR', sans-serif;}
 * { -webkit-tap-highlight-color:transparent; }
+#app {
+  padding-top: 5.2rem;
+  // overflow-y: scroll;
+}
 .wrap {
   padding: 3.6rem 2rem;
-  height: calc(100% - 5.2rem);
+  // height: calc(100% - 5.2rem);
+  height: 100vh;
   overflow-y: scroll;
 }
 a {
