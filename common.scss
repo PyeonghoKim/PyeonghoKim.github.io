@@ -83,3 +83,5 @@ span.isActive::before, p.isActive {color: var(--color-amber-accent1) !important;
   clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
   clip-path: inset(50%);
 }
+/* 테스트로 숨김 */
+.hidden {display: none;}

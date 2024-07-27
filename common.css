@@ -236,4 +236,9 @@ span.isActive::before, p.isActive {
   clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
+}
+
+/* 테스트로 숨김 */
+.hidden {
+  display: none;
 }/*# sourceMappingURL=common.css.map */
