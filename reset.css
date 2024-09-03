@@ -11,7 +11,12 @@
 html {
   font-size: 62.5%;
 }
-body *:not(h1, footer, button, .global_compo) {
+body *:not(h1, footer, button, code, .line, .global_compo) {
+/* body * :not(h1), 
+body * :not(footer), 
+body * :not(button), 
+body * :not(code), 
+body * :not(.global_compo) { */
   text-align: left;
 }
 /* HTML5 시맨틱 태그 */
@@ -40,9 +45,9 @@ li, ol {
   list-style: none;
   text-decoration: none;
 }
-#app {
+/* #app {
   height: 100vh;
-}
+} */
 input[type="text"],
 input[type="number"],
 input[type="password"] {
@@ -58,6 +63,7 @@ button {
   color: transparent;
   background-color: transparent;
 }
+/* abbr {text-decoration: none;} */
 
 /* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

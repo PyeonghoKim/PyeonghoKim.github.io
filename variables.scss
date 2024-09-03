@@ -1,0 +1,16 @@
+@mixin border_radius($corner) {
+    border-radius: $corner;
+}
+@mixin shadow_sm($alpha) {
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, $alpha);
+}
+@mixin shadow_md($alpha) {
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, $alpha);
+}
+@mixin background_define($url, $sizeOpt, $repeat) {
+    background-image: url('../assets/images/' + $url + '.png');
+    background-size: $sizeOpt;
+    background-position: top left;
+    background-repeat: $repeat;
+    background-attachment: scroll;
+}
