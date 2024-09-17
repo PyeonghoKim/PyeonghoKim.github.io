@@ -63,22 +63,31 @@
 
 
   /* font-size */ 
-  --fz-px-xs: 1.2rem;
-  --fz-px-sm: 1.4rem;
-  --fz-px-rg: 1.6rem;
-  --fz-px-lg: 1.8rem;
-  --fz-px-xl: 2.1rem;
-  --fz-px-2xl: 2.4rem;
-  --fz-px-3xl: 2.7rem;
-  --fz-px-4xl: 3.0rem;
-  --fz-px-5xl: 3.3rem;
+  --fontPx-xs: 1.2rem;
+  --fontPx-sm: 1.4rem;
+  --fontPx-md: 1.6rem;
+  --fontPx-lg: 1.8rem;
+  --fontPx-xl: 2.1rem;
+  --fontPx-2xl: 2.4rem;
+  --fontPx-3xl: 2.7rem;
+  --fontPx-4xl: 3.0rem;
+  --fontPx-5xl: 3.3rem;
 
   /* 1rem = 10px 일때 */
-  --fz-rem-default: 1rem;
-  --fz-rem-sm: 1.2rem;
-  --fz-rem-md: 1.4rem;
-  --fz-rem-rg: 1.6rem;
-  --fz-rem-lg: 1.8rem;
+  --fontRem-1pt0: 1rem;
+  --fontRem-1pt2: 1.2rem;
+  --fontRem-1pt4: 1.4rem;
+  --fontRem-1pt6: 1.6rem;
+  --fontRem-1pt8: 1.8rem;
+  --fontRem-2pt1: 2.1rem;
+  --fontRem-2pt4: 2.4rem;
+  --fontRem-2pt7: 2.7rem;
+  --fontRem-3pt0: 3rem;
+  --fontRem-3pt3: 3.3rem;
+  --fontRem-3pt6: 3.6rem;
+  --fontRem-3pt9: 3.9rem;
+  --fontRem-4pt2: 4.2rem;
+  --fontRem-4pt5: 4.5rem;
 }
 
 

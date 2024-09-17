@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 구글 폰트 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
-/* _root.scss */
+/* scss 삽입 */
 :root {
   /*
       root    scss   1
@@ -51,21 +51,30 @@
   /* font-family */
   /* @media 스크린 너비 */
   /* font-size */
-  --fz-px-xs: 1.2rem;
-  --fz-px-sm: 1.4rem;
-  --fz-px-rg: 1.6rem;
-  --fz-px-lg: 1.8rem;
-  --fz-px-xl: 2.1rem;
-  --fz-px-2xl: 2.4rem;
-  --fz-px-3xl: 2.7rem;
-  --fz-px-4xl: 3.0rem;
-  --fz-px-5xl: 3.3rem;
+  --fontPx-xs: 1.2rem;
+  --fontPx-sm: 1.4rem;
+  --fontPx-md: 1.6rem;
+  --fontPx-lg: 1.8rem;
+  --fontPx-xl: 2.1rem;
+  --fontPx-2xl: 2.4rem;
+  --fontPx-3xl: 2.7rem;
+  --fontPx-4xl: 3.0rem;
+  --fontPx-5xl: 3.3rem;
   /* 1rem = 10px 일때 */
-  --fz-rem-default: 1rem;
-  --fz-rem-sm: 1.2rem;
-  --fz-rem-md: 1.4rem;
-  --fz-rem-rg: 1.6rem;
-  --fz-rem-lg: 1.8rem;
+  --fontRem-1pt0: 1rem;
+  --fontRem-1pt2: 1.2rem;
+  --fontRem-1pt4: 1.4rem;
+  --fontRem-1pt6: 1.6rem;
+  --fontRem-1pt8: 1.8rem;
+  --fontRem-2pt1: 2.1rem;
+  --fontRem-2pt4: 2.4rem;
+  --fontRem-2pt7: 2.7rem;
+  --fontRem-3pt0: 3rem;
+  --fontRem-3pt3: 3.3rem;
+  --fontRem-3pt6: 3.6rem;
+  --fontRem-3pt9: 3.9rem;
+  --fontRem-4pt2: 4.2rem;
+  --fontRem-4pt5: 4.5rem;
 }
 
 /* 테스트 - 꼭 따로 분리 */
@@ -457,6 +466,9 @@ span.isActive::before, p.isActive {
   min-width: 23.2rem;
   margin: 2rem 0;
 }
+.form_code td {
+  padding: 0.4rem 0;
+}
 
 .form_code code,
 .wrap_code code {
@@ -625,18 +637,6 @@ span.isActive::before, p.isActive {
   &:first-child {border-top-right-radius: .4rem;}
   &:last-child {border-bottom-right-radius: .4rem;}
 }*/
-@media (min-width: 375px) {
-  .form_code {
-    min-width: 31.1rem;
-  }
-  .form_code code,
-  .wrap_code code {
-    font-size: 1.2rem;
-  }
-  .gutter .line code, .codearea .line code {
-    line-height: 2.2rem;
-  }
-}
 .header, .header + .tab_navi,
 .wrap, .bottom_tab {
   min-width: 28rem;
@@ -651,4 +651,26 @@ span.isActive::before, p.isActive {
 
 .wrap {
   margin: 0 auto;
+}
+
+.header, .header + .tab_navi, .wrap, .bottom_tab {
+  border-left: 0;
+  border-right: 0;
+}
+
+@media (min-width: 375px) {
+  .form_code {
+    min-width: 31.1rem;
+  }
+  .form_code code,
+  .wrap_code code {
+    font-size: 1.2rem;
+  }
+  .gutter .line code, .codearea .line code {
+    line-height: 2.2rem;
+  }
+  .header, .header + .tab_navi, .wrap, .bottom_tab {
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+  }
 }/*# sourceMappingURL=common.css.map */

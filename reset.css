@@ -62,6 +62,7 @@ button {
   box-shadow: none;
   color: transparent;
   background-color: transparent;
+  cursor: pointer;
 }
 /* abbr {text-decoration: none;} */
 

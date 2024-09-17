@@ -7,10 +7,23 @@
 @mixin shadow_md($alpha) {
     box-shadow: 0 .4rem .8rem rgba(0, 0, 0, $alpha);
 }
+@mixin shadow_lg($alpha) {
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, $alpha);
+}
 @mixin background_define($url, $sizeOpt, $repeat) {
     background-image: url('../assets/images/' + $url + '.png');
     background-size: $sizeOpt;
     background-position: top left;
     background-repeat: $repeat;
     background-attachment: scroll;
+}
+@mixin borderX($bd_left, $bd_right) {
+    border-left: 1px solid $bd_left;
+    border-right: 1px solid $bd_right;
+}
+@mixin fixed_center($poseval, $left, $transX, $transY) {
+  position: $poseval;
+  left: $left;
+  top: $top;
+  transform: translate($transX, $transY);
 }
