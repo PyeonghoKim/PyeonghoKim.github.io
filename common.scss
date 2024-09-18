@@ -20,6 +20,10 @@ body {font-family: 'Montserrat', 'Noto Sans KR', sans-serif;}
 * { -webkit-tap-highlight-color:transparent; }
 #app {
   padding-top: 5.2rem;
+  min-width: 28rem;
+  max-width: 43rem;
+  margin: 0 auto;
+  overflow-x: hidden;
   // overflow-y: scroll;
 }
 .wrap {
@@ -449,6 +453,6 @@ span.isActive::before, p.isActive {
     // .line {line-height: 2.2rem;}
   }
   .header, .header + .tab_navi, .wrap, .bottom_tab {
-    @include borderX($bd_left: #e0e0e0, $bd_right: #e0e0e0);
+    @include borderX($bd_left: #f0f0f0, $bd_right: #f0f0f0);
   }
 }

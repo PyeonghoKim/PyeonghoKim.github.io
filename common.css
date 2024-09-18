@@ -41,6 +41,7 @@
   --btn-h-3xl: 6.0rem;
   --btn-h-4xl: 6.4rem;
   --btn-h-5xl: 6.8rem;
+  --btn-h-6xl: 7rem;
   /* space */
   --space-unit-xs: .8rem;
   --space-unit-sm: 1.2rem;
@@ -63,6 +64,7 @@
   /* 1rem = 10px 일때 */
   --fontRem-1pt0: 1rem;
   --fontRem-1pt2: 1.2rem;
+  --fontRem-1pt3: 1.3rem;
   --fontRem-1pt4: 1.4rem;
   --fontRem-1pt6: 1.6rem;
   --fontRem-1pt8: 1.8rem;
@@ -99,6 +101,10 @@ body {
 
 #app {
   padding-top: 5.2rem;
+  min-width: 28rem;
+  max-width: 43rem;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .wrap {
@@ -670,7 +676,7 @@ span.isActive::before, p.isActive {
     line-height: 2.2rem;
   }
   .header, .header + .tab_navi, .wrap, .bottom_tab {
-    border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
   }
 }/*# sourceMappingURL=common.css.map */

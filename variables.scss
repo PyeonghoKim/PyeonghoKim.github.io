@@ -10,6 +10,9 @@
 @mixin shadow_lg($alpha) {
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, $alpha);
 }
+@mixin shadow_header($alpha) {
+    box-shadow: 0 -0.1rem .5rem rgba(0, 0, 0, $alpha);
+}
 @mixin background_define($url, $sizeOpt, $repeat) {
     background-image: url('../assets/images/' + $url + '.png');
     background-size: $sizeOpt;
