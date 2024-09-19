@@ -25,8 +25,21 @@
     border-right: 1px solid $bd_right;
 }
 @mixin fixed_center($poseval, $left, $transX, $transY) {
-  position: $poseval;
-  left: $left;
-  top: $top;
-  transform: translate($transX, $transY);
+    position: $poseval;
+    left: $left;
+    top: $top;
+    transform: translate($transX, $transY);
+}
+@mixin pos_center($display, $w, $h) {
+    position: absolute;
+    display: $display;
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

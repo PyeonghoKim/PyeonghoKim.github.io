@@ -13,14 +13,21 @@
   */
   /* Safari 모웹 화면 높이 vh 설정 */
   /* color */
-  --color-black-deep1: #757575;
-  --color-black-deep2: #616161;
-  --color-black-deep3: #333;
-  --color-black-deep4: #000;
-  --color-white-lighten1: #eee;
-  --color-white-lighten2: #f5f5f5;
-  --color-white-lighten3: #bdbdbd;
-  --color-white-lighten4: #fff;
+  --color-grey-lighten1: #e0e0e0;
+  --color-grey-lighten2: #eeeeee;
+  --color-grey-lighten3: #f5f5f5;
+  --color-grey-lighten4: #ffffff;
+  --color-grey-another1: #f6f6f6;
+  --color-skycolor-level1: #f2f4f7;
+  --color-skycolor-level2: #dce2ea;
+  --color-grey-dull1: #bdbdbd;
+  --color-grey-dull2: #9e9e9e;
+  --color-grey-dull3: #757575;
+  --color-grey-dull4: #616161;
+  --color-black-deep1: #424242;
+  --color-black-deep2: #333333;
+  --color-black-deep3: #222222;
+  --color-black-deep4: #000000;
   --color-yellow-accent1: #ffff00;
   --color-yellow-accent2: #ffea00;
   --color-yellow-accent3: #ffd600;
@@ -78,6 +85,28 @@
   --fontRem-4pt2: 4.2rem;
   --fontRem-4pt5: 4.5rem;
 }
+:root :not(.dark-mode) {
+  transition: all 0.2s cubic-bezier(0.27, -0.38, 0.35, 1.01);
+}
+:root .dark-mode {
+  transition: all 0.2s cubic-bezier(1, 0.12, 0.35, 1.01);
+  --color-grey-lighten1: #424242;
+  --color-grey-lighten2: #333333;
+  --color-grey-lighten3: #222222;
+  --color-grey-lighten4: #000000;
+  --color-grey-another1: #6c6e75;
+  --color-skycolor-pale1: #32373f;
+  --color-skycolor-level1: #1f242d;
+  --color-skycolor-level2: #0d1424;
+  --color-grey-dull1: #616161;
+  --color-grey-dull2: #757575;
+  --color-grey-dull3: #9e9e9e;
+  --color-grey-dull4: #bdbdbd;
+  --color-black-deep1: #e0e0e0;
+  --color-black-deep2: #eeeeee;
+  --color-black-deep3: #f5f5f5;
+  --color-black-deep4: #ffffff;
+}
 
 /* 테스트 - 꼭 따로 분리 */
 .container {
@@ -87,12 +116,39 @@
   margin-top: calc(var(--space-unit-sm) * 2);
 }
 
+/* 비추천.. (안드로이드, iOS 버전따라 지원 안 될 수도..)
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-color: #333333;
+
+    --color-txt-deep1: #bdbdbd;
+    --color-txt-deep2: #e0e0e0;
+    --color-txt-deep3: #eeeeee;
+    --color-txt-deep4: #f5f5f5;
+    --color-txt-deep5: #ffffff;
+  }
+  body {
+    background-color: var(--color-bg-color);
+  }
+}*/
 /* 루트 scss 파일 분할 -> 다른 scss 파일로 이전 */
 /* 믹스인 컴포넌트 - (SPA) 믹스인 페이지 별도 생성해야 
    파일명: variables_ (분할 컴파일)
 */
 body {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  background-color: transparent;
+  overflow-y: auto;
+}
+body .header, body .tab_navi, body .bottom_tab {
+  transition: all 0.15s cubic-bezier(1, -0.47, 0.22, 1.47);
+}
+body.active_popup {
+  overflow-y: hidden;
+}
+body.active_popup .header, body.active_popup .tab_navi, body.active_popup .bottom_tab {
+  z-index: 1;
+  transition: all 0.15s cubic-bezier(0, 0.29, 0.69, 1.83);
 }
 
 * {
@@ -107,8 +163,14 @@ body {
   overflow-x: hidden;
 }
 
+:root #app {
+  background-color: var(--color-grey-lighten4);
+}
+
 .wrap {
   padding: 3.6rem 2rem;
+  margin: 0 auto;
+  background-color: var(--color-skycolor-level1);
   width: 100%;
 }
 
@@ -425,7 +487,7 @@ span.isActive::before, p.isActive {
       .define {color: #9cdcfc;}
       .string {color: #cb8f76;}
       .number {color: #b5cea7;}
-      .components {color: #5ac9b1;}
+      .component {color: #5ac9b1;}
       .syntax {
         &-magenta {color: #d76fd3;}
         &-yellowish-0 {color: #dcddaa;}
@@ -511,14 +573,20 @@ span.isActive::before, p.isActive {
 .gutter.theme\:lighten .plain, .codearea.theme\:lighten .plain {
   color: #A1ACB7;
 }
+.gutter.theme\:switch, .codearea.theme\:switch {
+  background-color: var(--color-grey-lighten4);
+}
+.gutter.theme\:switch .present, .codearea.theme\:switch .present {
+  color: #4C4C4C;
+}
+.gutter.theme\:switch .plain, .codearea.theme\:switch .plain {
+  color: #A1ACB7;
+}
 
 .gutter {
   text-align: right !important;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
-  /*&.theme\:simplify {
-    border-right: .3rem solid #435A5F;
-  }*/
 }
 .gutter .line {
   padding: 0 0.8em 0 1em;
@@ -533,6 +601,9 @@ span.isActive::before, p.isActive {
 .gutter.theme\:lighten {
   border-right: 0.3rem solid rgba(144, 146, 131, 0.15);
 }
+.gutter.theme\:switch {
+  border-right: 0.3rem solid rgba(144, 146, 131, 0.15);
+}
 
 .codearea {
   text-align: left !important;
@@ -544,7 +615,7 @@ span.isActive::before, p.isActive {
     .define {color: #9cdcfc;}
     .string {color: #cb8f76;}
     .number {color: #b5cea7;}
-    .components {color: #5ac9b1;}
+    .component {color: #5ac9b1;}
     .fordesc {color: #6A9955;}
     .syntax {
       &-magenta {color: #d76fd3;}
@@ -566,7 +637,7 @@ span.isActive::before, p.isActive {
 .codearea.theme\:darken .number {
   color: #B5CEA7;
 }
-.codearea.theme\:darken .components {
+.codearea.theme\:darken .component {
   color: #5AC9B1;
 }
 .codearea.theme\:darken .fordesc {
@@ -596,7 +667,7 @@ span.isActive::before, p.isActive {
 .codearea.theme\:lighten .number {
   color: #946529;
 }
-.codearea.theme\:lighten .components {
+.codearea.theme\:lighten .component {
   color: #8804F4;
 }
 .codearea.theme\:lighten .fordesc {
@@ -614,6 +685,36 @@ span.isActive::before, p.isActive {
 .codearea.theme\:lighten .syntax-gleamyblue {
   color: #1D3FB5;
 }
+.codearea.theme\:switch .tag {
+  color: #7D91D3;
+}
+.codearea.theme\:switch .define {
+  color: #9663B2;
+}
+.codearea.theme\:switch .string, .codearea.theme\:switch .classobj {
+  color: #5B9B44;
+}
+.codearea.theme\:switch .number {
+  color: #946529;
+}
+.codearea.theme\:switch .component {
+  color: #8804F4;
+}
+.codearea.theme\:switch .fordesc {
+  color: #6A9955;
+}
+.codearea.theme\:switch .syntax-magenta {
+  color: #D4868E;
+}
+.codearea.theme\:switch .syntax-yellowish-0 {
+  color: #DA8F41;
+}
+.codearea.theme\:switch .syntax-yellowish-1 {
+  color: #C56111;
+}
+.codearea.theme\:switch .syntax-gleamyblue {
+  color: #1D3FB5;
+}
 .codearea.theme\:terminal .command {
   color: #111;
 }
@@ -625,7 +726,7 @@ span.isActive::before, p.isActive {
   padding: 0 1.2rem;
   height: 4rem;
   line-height: 4rem;
-  background-color: #eee;
+  background-color: var(--color-grey-another1);
   border-radius: 0.6rem;
 }
 .codearea.theme\:terminal .line code {
@@ -655,13 +756,53 @@ span.isActive::before, p.isActive {
   right: 0;
 }
 
-.wrap {
-  margin: 0 auto;
-}
-
 .header, .header + .tab_navi, .wrap, .bottom_tab {
   border-left: 0;
   border-right: 0;
+}
+
+/* 다크 모드 */
+.dark-mode .gutter.theme\:switch, .dark-mode .codearea.theme\:switch {
+  background-color: var(--color-skycolor-pale1);
+}
+.dark-mode .gutter.theme\:switch .present, .dark-mode .codearea.theme\:switch .present {
+  color: #D1D1D1;
+}
+.dark-mode .gutter.theme\:switch .plain, .dark-mode .codearea.theme\:switch .plain {
+  color: #858585;
+}
+.dark-mode .gutter.theme\:switch {
+  border-right: 0.3rem solid #435A5F;
+}
+.dark-mode .codearea.theme\:switch .tag {
+  color: #569CD6;
+}
+.dark-mode .codearea.theme\:switch .define {
+  color: #9CDCFC;
+}
+.dark-mode .codearea.theme\:switch .string {
+  color: #CB8F76;
+}
+.dark-mode .codearea.theme\:switch .number {
+  color: #B5CEA7;
+}
+.dark-mode .codearea.theme\:switch .component {
+  color: #5AC9B1;
+}
+.dark-mode .codearea.theme\:switch .fordesc {
+  color: #6A9955;
+}
+.dark-mode .codearea.theme\:switch .syntax-magenta {
+  color: #D76FD3;
+}
+.dark-mode .codearea.theme\:switch .syntax-yellowish-0 {
+  color: #DCDDAA;
+}
+.dark-mode .codearea.theme\:switch .syntax-yellowish-1 {
+  color: #F1CD31;
+}
+.dark-mode .codearea.theme\:switch .syntax-gleamyblue {
+  color: #4FC0F9;
 }
 
 @media (min-width: 375px) {
@@ -676,7 +817,7 @@ span.isActive::before, p.isActive {
     line-height: 2.2rem;
   }
   .header, .header + .tab_navi, .wrap, .bottom_tab {
-    border-left: 1px solid #f0f0f0;
-    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid var(--color-grey-another1);
+    border-right: 1px solid var(--color-grey-another1);
   }
 }/*# sourceMappingURL=common.css.map */
