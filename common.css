@@ -186,7 +186,7 @@ span.isActive::before, p.isActive {
   color: var(--color-amber-accent2) !important;
 }
 
-.apply_parentWidth img {
+.width_applyUnder img {
   display: block;
   width: 100% !important;
 }
