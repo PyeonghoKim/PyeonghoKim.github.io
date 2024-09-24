@@ -20,6 +20,13 @@
     background-repeat: $repeat;
     background-attachment: scroll;
 }
+@mixin background_define2($url2, $pos, $sizeOpt, $repeat) {
+    background-image: url('../../assets/images/' + $url2 + '.png');
+    background-size: $sizeOpt;
+    background-position: $pos;
+    background-repeat: $repeat;
+    background-attachment: scroll;
+}
 @mixin borderX($bd_left, $bd_right) {
     border-left: 1px solid $bd_left;
     border-right: 1px solid $bd_right;
