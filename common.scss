@@ -325,6 +325,7 @@ span.isActive::before, p.isActive {
     background-color: var(--color-grey-lighten4);
     .present {color: #4C4C4C;}
     .plain {color: #A1ACB7;}
+    .insert {color: var(--color-amber-accent2);}
   }
   // &.theme\:simplify {}
 }
@@ -391,7 +392,8 @@ span.isActive::before, p.isActive {
   &.theme\:switch {
     .tag {color: #7D91D3;}
     .define {color: #9663B2;}
-    .string, .classobj {color: #5B9B44;}
+    // .string, .classobj {color: #5B9B44;}
+    .string, .classobj {color: #0032AF;}
     .number {color: #946529;}
     .component {color: #8804F4;}
     .fordesc {color: #6A9955;}
@@ -400,6 +402,11 @@ span.isActive::before, p.isActive {
       &-yellowish-0 {color: #DA8F41;}
       &-yellowish-1 {color: #C56111;}
       &-gleamyblue {color: #1D3FB5;}
+    }
+    .rowDesc {
+      * {
+        color: #6A9955;
+      }
     }
   }
 
@@ -467,6 +474,45 @@ span.isActive::before, p.isActive {
   border-right: 0; 
 }
 
+/* sortUi 스타일 수정 */
+.sortUi .form_code {
+  tr {display: block;}
+  tbody tr {
+    height: 14rem;
+    // .codearea {
+    //   overflow-y: unset;
+    // }
+  }
+  tfoot tr {
+    height: 40rem;
+    &:first-child {margin-top: 2rem;}  
+  }
+}
+/* CodeNavbar 탭메뉴 컴포넌트 스타일 수정 */
+.sortUi .adopt_heightLvMin .form_code tbody tr {
+  height: 7.4rem;
+}
+.sortUi .adopt_heightLv1 .form_code tbody tr {
+  height: 14rem;
+}
+.sortUi .get_bottomTab {
+  .bottom_tab {
+      position: relative;
+      display: flex;
+      // pointer-events: none;
+      border: 0 !important;
+      padding-top: 0;
+      padding-bottom: 0;
+      align-items: center;
+      background-color: var(--color-grey-lighten4);
+      z-index: 0;
+      .router-link-active .preview__icon span::before, 
+      .router-link-active .preview + p {
+        color: var(--color-grey-dull3) !important;
+      }
+  }
+}
+
 /* 다크 모드 */
 .dark-mode {
   .gutter, .codearea {
@@ -496,8 +542,25 @@ span.isActive::before, p.isActive {
         &-gleamyblue {color: #4FC0F9;}
       }
     }
+    &.codearea.theme\:terminal {
+      .command, code:not(.option) {
+        color: #333;
+      }
+      .line {
+        background-color: #828592;
+      }
+    }
+  }
+  .sortUi .get_bottomTab {
+    .bottom_tab {
+      .router-link-active .preview__icon span::before, 
+      .router-link-active .preview + p {
+        color: #f6f6f6 !important;
+      }
+    }
   }
 }
+
 
 @media(min-width: 375px) {
   .form_code {

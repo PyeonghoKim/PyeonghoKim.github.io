@@ -572,6 +572,9 @@ span.isActive::before, p.isActive {
 .gutter.theme\:switch .plain, .codearea.theme\:switch .plain {
   color: #A1ACB7;
 }
+.gutter.theme\:switch .insert, .codearea.theme\:switch .insert {
+  color: var(--color-amber-accent2);
+}
 
 .gutter {
   text-align: right !important;
@@ -682,7 +685,7 @@ span.isActive::before, p.isActive {
   color: #9663B2;
 }
 .codearea.theme\:switch .string, .codearea.theme\:switch .classobj {
-  color: #5B9B44;
+  color: #0032AF;
 }
 .codearea.theme\:switch .number {
   color: #946529;
@@ -704,6 +707,9 @@ span.isActive::before, p.isActive {
 }
 .codearea.theme\:switch .syntax-gleamyblue {
   color: #1D3FB5;
+}
+.codearea.theme\:switch .rowDesc * {
+  color: #6A9955;
 }
 .codearea.theme\:terminal .command {
   color: #111;
@@ -751,6 +757,44 @@ span.isActive::before, p.isActive {
   border-right: 0;
 }
 
+/* sortUi 스타일 수정 */
+.sortUi .form_code tr {
+  display: block;
+}
+.sortUi .form_code tbody tr {
+  height: 14rem;
+}
+.sortUi .form_code tfoot tr {
+  height: 40rem;
+}
+.sortUi .form_code tfoot tr:first-child {
+  margin-top: 2rem;
+}
+
+/* CodeNavbar 탭메뉴 컴포넌트 스타일 수정 */
+.sortUi .adopt_heightLvMin .form_code tbody tr {
+  height: 7.4rem;
+}
+
+.sortUi .adopt_heightLv1 .form_code tbody tr {
+  height: 14rem;
+}
+
+.sortUi .get_bottomTab .bottom_tab {
+  position: relative;
+  display: flex;
+  border: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: center;
+  background-color: var(--color-grey-lighten4);
+  z-index: 0;
+}
+.sortUi .get_bottomTab .bottom_tab .router-link-active .preview__icon span::before,
+.sortUi .get_bottomTab .bottom_tab .router-link-active .preview + p {
+  color: var(--color-grey-dull3) !important;
+}
+
 /* 다크 모드 */
 .dark-mode .gutter.theme\:switch, .dark-mode .codearea.theme\:switch {
   background-color: var(--color-skycolor-pale1);
@@ -793,6 +837,16 @@ span.isActive::before, p.isActive {
 }
 .dark-mode .codearea.theme\:switch .syntax-gleamyblue {
   color: #4FC0F9;
+}
+.dark-mode .codearea.codearea.theme\:terminal .command, .dark-mode .codearea.codearea.theme\:terminal code:not(.option) {
+  color: #333;
+}
+.dark-mode .codearea.codearea.theme\:terminal .line {
+  background-color: #828592;
+}
+.dark-mode .sortUi .get_bottomTab .bottom_tab .router-link-active .preview__icon span::before,
+.dark-mode .sortUi .get_bottomTab .bottom_tab .router-link-active .preview + p {
+  color: #f6f6f6 !important;
 }
 
 @media (min-width: 375px) {
