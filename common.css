@@ -709,7 +709,7 @@ span.isActive::before, p.isActive {
   color: #1D3FB5;
 }
 .codearea.theme\:switch .rowDesc * {
-  color: #6A9955;
+  color: #6A9955 !important;
 }
 .codearea.theme\:terminal .command {
   color: #111;
